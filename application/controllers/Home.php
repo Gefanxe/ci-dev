@@ -15,6 +15,7 @@ class Home extends CI_Controller {
 		$this->load->view('home_aboutus');
 	}
 
+	// 測試
 	public function test() {
 		$this->load->model('friends_model');
 
