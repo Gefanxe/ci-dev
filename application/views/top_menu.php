@@ -18,7 +18,7 @@
         <li><a href="services.html">Services</a></li>
         </ul>
     </li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="/home/contact">Contact</a></li>
     <li class="probootstra-cta-button"><a href="#" class="btn" data-toggle="modal" data-target="#loginModal">Log in</a></li>
     <li class="probootstra-cta-button last"><a href="#" class="btn btn-ghost" data-toggle="modal" data-target="#signupModal">Sign up</a></li>
 </ul>

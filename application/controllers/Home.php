@@ -15,6 +15,26 @@ class Home extends CI_Controller {
 		$this->load->view('home_aboutus');
 	}
 
+	public function contact() {
+		$this->load->view('home_contact');
+	}
+
+	public function docontact() {
+		$this->load->model('stack_model');
+		if ($this->input->method() == 'post') {
+			$ipt = $this->input->post();
+			$result = $this->stack_model->saveContact($ipt);
+
+			$data = array(
+				'result' => $result
+			);
+
+			$this->load->view('home_contact', $data);
+		} else {
+			redirect('/home/contact');
+		}
+	}
+
 	// 測試
 	public function test() {
 		$this->load->model('friends_model');
