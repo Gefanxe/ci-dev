@@ -16,7 +16,10 @@ class Home extends CI_Controller {
 	}
 
 	public function contact() {
-		$this->load->view('home_contact');
+		$data = array(
+			'result' => FALSE
+		);
+		$this->load->view('home_contact', $data);
 	}
 
 	public function docontact() {

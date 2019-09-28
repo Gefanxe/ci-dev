@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 $CI =& get_instance();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +68,10 @@ $CI =& get_instance();
         <div class="row">
           <div class="col-md-5 probootstrap-animate" data-animate-effect="fadeIn">
             <h2>Drop us a line</h2>
-            <form action="#" method="post" class="probootstrap-form">
+            <?php if ($result) { ?>
+            資料已送出
+            <?php } else { ?>
+            <form action="/home/docontact" method="post" class="probootstrap-form">
               <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" class="form-control" id="name" name="name">
@@ -88,6 +92,7 @@ $CI =& get_instance();
                 <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Submit Form">
               </div>
             </form>
+            <?php } ?>
           </div>
           <div class="col-md-6 col-md-push-1 probootstrap-animate" data-animate-effect="fadeIn">
             <h2>Get in touch</h2>

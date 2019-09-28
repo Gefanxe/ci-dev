@@ -12,10 +12,13 @@ class Stack_model extends CI_Model {
     public function saveContact($fromInput) {
         
         $contactData = array(
-			'' => $fromInput['']
+			'full_name' => $fromInput['name'],
+			'email' => $fromInput['email'],
+			'subject' => $fromInput['subject'],
+			'message' => $fromInput['message']
         );
 
-        $result = $this->db->insert('', $userData);
+        $this->db->insert('contact', $contactData);
 
         $iid = $this->db->insert_id();
         
